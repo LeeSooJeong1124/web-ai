@@ -1,0 +1,101 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tigers - Majestic Creatures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: 3px solid #e8491d;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media(max-width: 768px){
+            .container {
+                width: 95%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tigers: Kings of the Jungle</h1>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <p>Tigers are the largest cat species, known for their distinctive orange and black stripes. They are apex predators, playing a crucial role in maintaining the balance of their ecosystems. Unfortunately, tiger populations have declined drastically due to habitat loss and poaching.</p>
+
+            <div class="image-grid">
+                <img src="https://via.placeholder.com/350x200/FF5733/000000?text=Tiger+Image+1" alt="Tiger prowling">
+                <img src="https://via.placeholder.com/350x200/33A8FF/FFFFFF?text=Tiger+Image+2" alt="Tiger resting">
+                <img src="https://via.placeholder.com/350x200/4CAF50/FFFFFF?text=Tiger+Image+3" alt="Tiger cubs">
+            </div>
+
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+```
