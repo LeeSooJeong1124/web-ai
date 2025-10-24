@@ -7,7 +7,7 @@
     <title>All About Dogs</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -23,41 +23,50 @@
 
         h1 {
             text-align: center;
-            margin-bottom: 20px;
             color: #555;
         }
 
         p {
-            line-height: 1.6em;
+            text-align: justify;
+            line-height: 1.6;
         }
 
-        .images {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-            flex-wrap: wrap;
+        img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 10px 0;
+            display: none; /* Initially hidden */
         }
 
-        .images img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 20px;
+        video {
+            width: 100%;
+            max-width: 600px;
+            display: none; /* Initially hidden */
         }
 
-        .video-container {
-            margin-top: 30px;
-            text-align: center;
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #449d44;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
         }
 
         @media (max-width: 768px) {
             .container {
                 width: 95%;
-            }
-
-            .images img {
-                width: 100%;
             }
         }
     </style>
@@ -65,18 +74,39 @@
 <body>
     <div class="container">
         <h1>All About Dogs</h1>
-        <p>Dogs are domesticated mammals, not natural wild animals. They are in the same family as wolves, coyotes, and foxes. Dogs were one of the first animals to be domesticated and are believed to have been bred from wolves. They have been selectively bred over millennia for various behaviors, sensory capabilities, and physical attributes.</p>
+        <p>Dogs, also known as domestic dogs, are domesticated canids belonging to the species Canis lupus familiaris. They are beloved companions and working animals, known for their loyalty, intelligence, and diverse breeds. From tiny Chihuahuas to massive Great Danes, dogs come in a wide variety of shapes, sizes, and temperaments. They have been human companions for thousands of years, providing companionship, protection, and assistance in various tasks such as hunting, herding, and search and rescue.</p>
 
-        <div class="images">
-            <img src="https://via.placeholder.com/300x200/007bff/ffffff?text=Dog+Image+1" alt="Happy Dog">
-            <img src="https://via.placeholder.com/300x200/28a745/ffffff?text=Dog+Image+2" alt="Cute Puppy">
-            <img src="https://via.placeholder.com/300x200/dc3545/ffffff?text=Dog+Image+3" alt="Loyal Dog">
-        </div>
+        <button id="showImagesBtn">Show Images</button>
+        <img id="dogImage1" src="https://via.placeholder.com/300x200/007bff/ffffff?text=Dog+Image+1" alt="Cute Dog 1">
+        <img id="dogImage2" src="https://via.placeholder.com/300x200/dc3545/ffffff?text=Dog+Image+2" alt="Happy Dog 2">
+        <img id="dogImage3" src="https://via.placeholder.com/300x200/28a745/ffffff?text=Dog+Image+3" alt="Playful Dog 3">
 
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+        <button id="showVideoBtn">Show Video</button>
+        <video id="dogVideo" controls>
+            <source src="dog.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
+
+    <script>
+        const showImagesBtn = document.getElementById('showImagesBtn');
+        const dogImage1 = document.getElementById('dogImage1');
+        const dogImage2 = document.getElementById('dogImage2');
+        const dogImage3 = document.getElementById('dogImage3');
+
+        const showVideoBtn = document.getElementById('showVideoBtn');
+        const dogVideo = document.getElementById('dogVideo');
+
+        showImagesBtn.addEventListener('click', function() {
+            dogImage1.style.display = dogImage1.style.display === 'block' ? 'none' : 'block';
+            dogImage2.style.display = dogImage2.style.display === 'block' ? 'none' : 'block';
+            dogImage3.style.display = dogImage3.style.display === 'block' ? 'none' : 'block';
+        });
+
+        showVideoBtn.addEventListener('click', function() {
+            dogVideo.style.display = dogVideo.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
 </body>
 </html>
 ```

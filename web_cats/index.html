@@ -7,7 +7,7 @@
     <title>All About Cats</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -30,41 +30,58 @@
 
         header h1 {
             text-align: center;
-            margin: 0;
-            padding: 10px;
         }
 
         section {
             padding: 20px;
         }
 
-        .image-gallery {
+        .image-container {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-        }
-
-        .image-gallery img {
-            width: 30%;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-            height: auto;
-        }
-
-        .video-container {
-            text-align: center;
             margin-top: 20px;
         }
 
-        /* Responsive Design */
+        .image-container img {
+            width: 30%;
+            height: auto;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            box-sizing: border-box; /* to include padding and border in the element's total width and height */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            background-color: #e8491d;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #c43c17;
+        }
+
+        video {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
         @media (max-width: 768px) {
             .container {
-                width: 90%;
+                width: 95%;
             }
-
-            .image-gallery img {
+            .image-container img {
                 width: 100%;
             }
         }
@@ -79,19 +96,34 @@
 
     <section>
         <div class="container">
-            <p>Cats are domesticated carnivorous mammals in the Felidae family. They are known for their agility, independence, and affectionate nature. From playful kittens to regal seniors, cats bring joy to millions of households around the world.</p>
+            <p>Cats are beloved pets around the world, known for their independent nature, playful antics, and comforting purrs. They are fascinating creatures with unique behaviors and a rich history. This website provides a brief overview of these amazing animals.</p>
 
-            <div class="image-gallery">
-                <img src="https://via.placeholder.com/300x200/ff9933/fff?text=Cute+Cat+1" alt="Cute cat sitting">
-                <img src="https://via.placeholder.com/300x200/3399ff/fff?text=Sleeping+Cat+2" alt="Cat sleeping">
-                <img src="https://via.placeholder.com/300x200/9933ff/fff?text=Playful+Cat+3" alt="Cat playing">
+            <button id="showImagesBtn">Show Images</button>
+            <div class="image-container">
+                <img id="catImage1" class="hidden" src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Cute+Cat+1" alt="Cute Cat 1">
+                <img id="catImage2" class="hidden" src="https://via.placeholder.com/300x200/3498DB/FFFFFF?text=Cute+Cat+2" alt="Cute Cat 2">
+                <img id="catImage3" class="hidden" src="https://via.placeholder.com/300x200/2ECC71/FFFFFF?text=Cute+Cat+3" alt="Cute Cat 3">
             </div>
 
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
+            <button id="showVideoBtn">Show Video</button>
+            <video id="catVideo" class="hidden" controls>
+                <source src="cat_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
+
+    <script>
+        document.getElementById('showImagesBtn').addEventListener('click', function() {
+            document.getElementById('catImage1').classList.toggle('hidden');
+            document.getElementById('catImage2').classList.toggle('hidden');
+            document.getElementById('catImage3').classList.toggle('hidden');
+        });
+
+        document.getElementById('showVideoBtn').addEventListener('click', function() {
+            document.getElementById('catVideo').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
 ```

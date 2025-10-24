@@ -12,17 +12,18 @@ def generate_website_content(topic):
     model = genai.GenerativeModel('gemini-2.0-flash')
     
     prompt = f"""Create a simple HTML website about {topic}. The HTML should include:
-    - A proper HTML5 structure with <!DOCTYPE html>
-    - A title in the <head> section
-    - A main heading (h1) with the topic name
-    - A description paragraph about the topic
-    - 3 placeholder images with alt text (use placeholder.com or similar)
-    - 1 embedded video (use a placeholder video service)
-    - Basic CSS styling to make it look good
-    - Responsive design
-    
-    Return only the complete HTML code without any explanations or markdown formatting."""
-    
+                    •	A proper HTML5 structure with <!DOCTYPE html>
+                    •	A title in the <head> section
+                    •	A main heading (h1) with the topic name
+                    •	A description paragraph about the topic
+                    •	3 images that are initially hidden and appear only when an “Show Images” button is clicked (include alt text, use placeholder.com)
+                    •	1 video in .mp4 format that is initially hidden and appears only when a “Show Video” button is clicked
+                    •	Basic CSS styling to make it look good
+                    •	Responsive design
+                    •	JavaScript to toggle the visibility of the images and video when the respective buttons are clicked
+
+                Return only the complete HTML code without any explanations or markdown formatting."""
+                    
     try:
         response = model.generate_content(prompt)
         return response.text
@@ -62,7 +63,7 @@ This website was automatically generated using Google Gemini AI.
     return output_dir
 
 def main():
-    topics = ["cats", "dogs", "birds", "fish", "rabbits", "tigers", "lions", "elephants", "whales", "frogs"]
+    topics = ["cats", "dogs", "birds", "fish"]#, "rabbits", "tigers", "lions", "elephants", "whales", "frogs"]
     
     print("🚀 웹사이트 생성 시작...")
     print(f"📝 총 {len(topics)}개의 주제를 처리합니다.")
