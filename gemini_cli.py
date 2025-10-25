@@ -9,20 +9,40 @@ genai.configure(api_key=API_KEY)
 
 def generate_website_content(topic):
     """주제에 대한 웹사이트 콘텐츠를 생성합니다."""
-    model = genai.GenerativeModel('gemini-2.0-flash')
+    model = genai.GenerativeModel('gemini-2.5-pro')
     
-    prompt = f"""Create a simple HTML website about {topic}. The HTML should include:
-                    •	A proper HTML5 structure with <!DOCTYPE html>
-                    •	A title in the <head> section
-                    •	A main heading (h1) with the topic name
-                    •	A description paragraph about the topic
-                    •	3 images that are initially hidden and appear only when an “Show Images” button is clicked (include alt text, use placeholder.com)
-                    •	1 video in .mp4 format that is initially hidden and appears only when a “Show Video” button is clicked
-                    •	Basic CSS styling to make it look good
+    prompt = f"""Create a simple HTML website about {topic}.
+                The website should have the following structure and behavior:
+                    •	The site has three HTML files:
+                    •	index.html: main page
+                    •	image/image.html: image gallery page
+                    •	video/video.html: video page
+                    •	index.html should include:
+                    •	Proper HTML5 structure with <!DOCTYPE html>
+                    •	<head> section with a title
+                    •	A main heading (<h1>) showing the topic name
+                    •	A short description paragraph about the topic
+                    •	Two buttons:
+                    •	“View Images” → navigates to image/image.html
+                    •	“View Video” → navigates to video/video.html
+                    •	Basic CSS styling (centered layout, soft background, hover effects)
                     •	Responsive design
-                    •	JavaScript to toggle the visibility of the images and video when the respective buttons are clicked
-
-                Return only the complete HTML code without any explanations or markdown formatting."""
+                    •	image/image.html should include:
+                    •	Proper HTML5 structure
+                    •	A heading like “{topic} Image Gallery”
+                    •	Three <img> elements that load local images from the image/ folder
+                (e.g., image1.jpg, image2.png, image3.jpg)
+                    •	Each image must have appropriate alt text
+                    •	A “Back to Home” button that returns to ../index.html
+                    •	video/video.html should include:
+                    •	Proper HTML5 structure
+                    •	A heading like “{topic} Video”
+                    •	An embedded <video> tag that loads a local .mp4 file from the video/ folder (e.g., video.mp4)
+                with controls enabled
+                    •	A “Back to Home” button that returns to ../index.html
+                    •	Include consistent and simple CSS styling across all pages
+                    •	Return only the complete HTML code for all three files (index.html, image/image.html, and video/video.html) without any explanations or markdown formatting.
+                """
                     
     try:
         response = model.generate_content(prompt)
