@@ -1,0 +1,30 @@
+cat <<'EOF' > prompt.txt
+Create a simple HTML website about {topic}.
+The website should have the following structure and behavior:
+
+- Three HTML files:
+  - index.html: main page
+  - image/image.html: image gallery page
+  - video/video.html: video page
+
+index.html:
+- HTML5 structure with <!DOCTYPE html>
+- <head> with title
+- <h1> with topic name
+- Short description paragraph
+- Two buttons:
+  - “View Images” → navigates to image/image.html
+  - “View Video” → navigates to video/video.html
+- Basic CSS (center layout, hover effects)
+- Responsive design
+
+image/image.html:
+- Displays 3 local images (image1.jpg, image2.png, image3.jpg) with alt text
+- “Back to Home” button → ../index.html
+
+video/video.html:
+- Displays 1 local video (video.mp4) using <video controls>
+- “Back to Home” button → ../index.html
+
+Return only the complete HTML code for all three files without markdown or explanations.
+EOF

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs Image Gallery</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        h1 { 
+            color: #333; 
+            text-align: center; 
+            margin-bottom: 40px; 
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 30px; 
+            margin-bottom: 40px;
+        }
+        .image { 
+            text-align: center; 
+            background: white; 
+            padding: 25px; 
+            border-radius: 15px; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+            transition: transform 0.3s ease;
+        }
+        .image:hover {
+            transform: translateY(-5px);
+        }
+        .image img { 
+            max-width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 10px; 
+            margin-bottom: 15px;
+        }
+        .image p {
+            color: #666;
+            font-size: 1.1em;
+            margin: 0;
+        }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 30px; 
+            padding: 15px 30px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover { 
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dogs Image Gallery</h1>
+        <div class="gallery">
+            <div class="image">
+                <img src="https://picsum.photos/400/300?random=1" alt="Beautiful dogs">
+                <p>Amazing dogs in nature</p>
+            </div>
+            <div class="image">
+                <img src="https://picsum.photos/400/300?random=2" alt="Cute dogs">
+                <p>Adorable dogs close-up</p>
+            </div>
+            <div class="image">
+                <img src="https://picsum.photos/400/300?random=3" alt="Wild dogs">
+                <p>Wild dogs in action</p>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <a href="../index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

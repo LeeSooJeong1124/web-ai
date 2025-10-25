@@ -1,225 +1,69 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All About Birds</title>
+    <title>Birds - Home</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            min-height: 100vh; 
         }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 800px;
-            width: 90%;
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            text-align: center; 
         }
-        h1 {
-            color: #005f73;
+        h1 { 
+            color: white; 
+            font-size: 3.5em; 
+            margin-bottom: 20px; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+            font-weight: 300;
         }
-        p {
-            line-height: 1.6;
-            margin-bottom: 25px;
+        p { 
+            color: white; 
+            font-size: 1.3em; 
+            margin-bottom: 50px; 
+            line-height: 1.6; 
+            opacity: 0.9;
         }
-        .button-group {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
+        .buttons { 
+            display: flex; 
+            gap: 30px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
         }
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #0077b6;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+        .btn { 
+            padding: 18px 35px; 
+            background: rgba(255,255,255,0.15); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-size: 1.2em; 
+            transition: all 0.3s ease; 
+            border: 2px solid rgba(255,255,255,0.3); 
+            backdrop-filter: blur(10px);
         }
-        .button:hover {
-            background-color: #023e8a;
-            transform: translateY(-2px);
+        .btn:hover { 
+            background: rgba(255,255,255,0.25); 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the World of Birds</h1>
-        <p>
-            Birds are a group of warm-blooded vertebrates constituting the class Aves, characterized by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. They are found worldwide and in all habitats. Explore our gallery and video to see some of these magnificent creatures.
-        </p>
-        <div class="button-group">
-            <a href="image/image.html" class="button">View Images</a>
-            <a href="video/video.html" class="button">View Video</a>
+        <h1>Birds</h1>
+        <p>Welcome to our amazing birds website! Discover fascinating facts, beautiful images, and exciting videos about birds.</p>
+        <div class="buttons">
+            <a href="image/image.html" class="btn">🖼️ View Images</a>
+            <a href="video/video.html" class="btn">🎥 View Video</a>
         </div>
-    </div>
-</body>
-</html>
-
-<!-- image/image.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birds Image Gallery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 900px;
-            width: 90%;
-        }
-        h1 {
-            color: #005f73;
-            margin-bottom: 25px;
-        }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        .gallery img {
-            width: 100%;
-            max-width: 250px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #0077b6;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .button:hover {
-            background-color: #023e8a;
-            transform: translateY(-2px);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Birds Image Gallery</h1>
-        <div class="gallery">
-            <img src="image1.jpg" alt="A colorful Kingfisher bird on a branch.">
-            <img src="image2.png" alt="A majestic eagle soaring in the sky.">
-            <img src="image3.jpg" alt="A small, vibrant hummingbird feeding on a flower.">
-        </div>
-        <a href="../index.html" class="button">Back to Home</a>
-    </div>
-</body>
-</html>
-
-<!-- video/video.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birds Video</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 800px;
-            width: 90%;
-        }
-        h1 {
-            color: #005f73;
-            margin-bottom: 25px;
-        }
-        .video-container {
-            margin-bottom: 30px;
-            width: 100%;
-        }
-        video {
-            width: 100%;
-            max-width: 100%;
-            border-radius: 8px;
-        }
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #0077b6;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .button:hover {
-            background-color: #023e8a;
-            transform: translateY(-2px);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Birds Video</h1>
-        <div class="video-container">
-            <video src="video.mp4" controls>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <a href="../index.html" class="button">Back to Home</a>
     </div>
 </body>
 </html>

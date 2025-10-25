@@ -1,240 +1,69 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All About Dogs</title>
+    <title>Dogs - Home</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            min-height: 100vh; 
         }
-        .container {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 2rem 3rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 800px;
-            width: 90%;
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            text-align: center; 
         }
-        h1 {
-            color: #2c3e50;
+        h1 { 
+            color: white; 
+            font-size: 3.5em; 
+            margin-bottom: 20px; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+            font-weight: 300;
         }
-        p {
-            line-height: 1.6;
-            font-size: 1.1rem;
+        p { 
+            color: white; 
+            font-size: 1.3em; 
+            margin-bottom: 50px; 
+            line-height: 1.6; 
+            opacity: 0.9;
         }
-        .btn-container {
-            margin-top: 2rem;
+        .buttons { 
+            display: flex; 
+            gap: 30px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
         }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin: 10px;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #3498db;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+        .btn { 
+            padding: 18px 35px; 
+            background: rgba(255,255,255,0.15); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-size: 1.2em; 
+            transition: all 0.3s ease; 
+            border: 2px solid rgba(255,255,255,0.3); 
+            backdrop-filter: blur(10px);
         }
-        .btn:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 1.5rem;
-            }
-            .btn {
-                display: block;
-                width: calc(100% - 20px);
-                margin: 10px auto;
-            }
+        .btn:hover { 
+            background: rgba(255,255,255,0.25); 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the World of Dogs</h1>
-        <p>Dogs, known as man's best friend, are domesticated mammals, not natural wild animals. They were originally bred from wolves. They have been bred by humans for a long time, and were the first animals ever to be domesticated. Explore our gallery and videos to see why we love them so much!</p>
-        <div class="btn-container">
-            <a href="image/image.html" class="btn">View Images</a>
-            <a href="video/video.html" class="btn">View Video</a>
+        <h1>Dogs</h1>
+        <p>Welcome to our amazing dogs website! Discover fascinating facts, beautiful images, and exciting videos about dogs.</p>
+        <div class="buttons">
+            <a href="image/image.html" class="btn">🖼️ View Images</a>
+            <a href="video/video.html" class="btn">🎥 View Video</a>
         </div>
-    </div>
-</body>
-</html>
-
-<!-- image/image.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Image Gallery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 2rem 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-        }
-        .container {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 2rem 3rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 1000px;
-            width: 90%;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .gallery img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin-top: 2.5rem;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #3498db;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .btn:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 1.5rem;
-            }
-            .gallery img {
-                max-width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Dog Image Gallery</h1>
-        <div class="gallery">
-            <img src="image1.jpg" alt="A happy golden retriever sitting in a field of grass.">
-            <img src="image2.png" alt="A small pug with a wrinkled face looking at the camera.">
-            <img src="image3.jpg" alt="A border collie catching a frisbee in mid-air.">
-        </div>
-        <a href="../index.html" class="btn">Back to Home</a>
-    </div>
-</body>
-</html>
-
-<!-- video/video.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Video</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 2rem 3rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 800px;
-            width: 90%;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        video {
-            width: 100%;
-            max-width: 640px;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 1.5rem;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin-top: 2rem;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #3498db;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .btn:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 1.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Dog Video</h1>
-        <video controls>
-            <source src="video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <br>
-        <a href="../index.html" class="btn">Back to Home</a>
     </div>
 </body>
 </html>
