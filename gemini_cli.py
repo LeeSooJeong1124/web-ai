@@ -4,7 +4,7 @@ import google.generativeai as genai
 from datetime import datetime
 
 # Gemini API 설정
-API_KEY = "AIzaSyBuwKbtI-_3z2_wJzTPQm5cygukByaXmK8"  # 실제 API 키로 교체하세요
+API_KEY = ""  # 실제 API 키로 교체하세요
 genai.configure(api_key=API_KEY)
 
 def generate_website_content(topic):
